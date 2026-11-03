@@ -1,7 +1,7 @@
 :root {
   --bg: #f1f0ec;
   --fg: #232220;
-  --mut: #777670;
+  --mut: #6b6a65;
   --tint: #e5e4df;
   --tint2: #d9d8d2;
   --acc: #E12238;
@@ -28,7 +28,7 @@ body {
 main {
   max-width: 600px;
   margin: 0 auto;
-  padding: 48px 24px 64px;
+  padding: 48px 24px 8px;
 }
 
 .hand {
@@ -111,6 +111,7 @@ h1 {
 .sticker {
   position: absolute;
   width: 30%;
+  height: auto;
   top: 11.7%;
   right: 11.7%;
   transform: rotate(14deg);
@@ -239,9 +240,84 @@ button:focus-visible {
 }
 
 .fine {
-  margin-top: 48px;
+  margin: 8px 0 0;
   font-size: 14px;
   color: var(--mut);
+}
+
+.site-footer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.footer-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background: var(--highlight);
+  color: var(--fg);
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  background: #f3a5af;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+.footer-email-links {
+  position: relative;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.footer-email-links > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.footer-email-links > summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-email-chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .15s ease;
+}
+
+.footer-email-links[open] .footer-email-chevron {
+  transform: rotate(225deg) translateY(-2px);
+}
+
+.footer-email-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.footer-email-buttons .footer-link {
+  flex: 0 1 auto;
 }
 
 .hide {
@@ -250,7 +326,12 @@ button:focus-visible {
 
 @media (max-width: 520px) {
   main {
-    padding: 32px 20px 48px;
+    padding: 32px 20px 8px;
+  }
+
+  .site-footer {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   h1 {

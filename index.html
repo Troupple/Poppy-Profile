@@ -5,63 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta
   name="description"
-  content="Crop your photo, add a poppy, and save your profile picture privately in your browser."
+  content="Add a poppy to your profile picture with this free Remembrance Day profile picture maker. Crop your photo, position and rotate the poppy, then download a PNG privately in your browser."
 >
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#f1f0ec">
 <link rel="canonical" href="https://poppy.jambles.fun/">
 <link rel="icon" type="image/svg+xml" href="poppy.svg">
+<link rel="preload" as="image" href="demo.webp" fetchpriority="high">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="A Poppy for Your Profile Picture">
+<meta property="og:site_name" content="Poppy Profile">
 <meta property="og:url" content="https://poppy.jambles.fun/">
-<meta property="og:title" content="Add a Poppy to Your Profile Picture">
+<meta property="og:title" content="Poppy Profile | Remembrance Day Profile Picture Maker">
 <meta
   property="og:description"
-  content="Crop a photo, place a poppy, and save your finished profile picture right in your browser."
+  content="Add a poppy to your profile picture with this free Remembrance Day profile picture maker. Crop your photo, position and rotate the poppy, then download a PNG privately in your browser."
 >
-<meta property="og:image" content="banner.png">
+<meta property="og:image" content="banner.webp">
 <meta property="og:image:alt" content="Preview of a profile picture with a poppy added">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Add a Poppy to Your Profile Picture">
+<meta name="twitter:title" content="Poppy Profile | Remembrance Day Profile Picture Maker">
 <meta
   name="twitter:description"
-  content="Crop a photo, place a poppy, and save your finished profile picture right in your browser."
+  content="Add a poppy to your profile picture with this free Remembrance Day profile picture maker. Crop your photo, position and rotate the poppy, then download a PNG privately in your browser."
 >
-<meta name="twitter:image" content="banner.png">
+<meta name="twitter:image" content="banner.webp">
 <meta name="twitter:image:alt" content="Preview of a profile picture with a poppy added">
-<title>Poppy Profile</title>
+<title>Poppy Profile | Remembrance Day Profile Picture Maker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap"
-  rel="stylesheet"
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&family=Caveat:wght@500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'"
 >
-<link
-  href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap"
-  rel="stylesheet"
->
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&family=Caveat:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+</noscript>
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://poppy.jambles.fun/#website",
+      "url": "https://poppy.jambles.fun/",
+      "name": "Poppy Profile",
+      "description": "A free browser-based Remembrance Day profile picture maker for adding a poppy to your profile picture."
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://poppy.jambles.fun/#application",
+      "name": "Poppy Profile",
+      "url": "https://poppy.jambles.fun/",
+      "description": "Add a poppy to your profile picture with this free Remembrance Day profile picture maker. Crop, position, rotate, and download your image in the browser.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "image": "https://poppy.jambles.fun/banner.webp",
+      "featureList": [
+        "Crop a photo to a square",
+        "Move, resize, and rotate a remembrance poppy",
+        "Download the finished image as a PNG",
+        "Process photos in the browser without uploading them"
+      ],
+      "isPartOf": {
+        "@id": "https://poppy.jambles.fun/#website"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <main>
-  <h1>Put a poppy on your profile picture.</h1>
-  <p class="lede">Upload a picture, crop it, and then add a poppy.</p>
+  <h1>Add a poppy to your profile picture.</h1>
+  <p class="lede">A free Remembrance Day profile picture maker. Upload a photo, crop it, and position your poppy.</p>
 
   <div id="intro">
     <div class="demo">
       <div class="step" aria-hidden="true">
-        <img class="arr" src="RightArrow.svg" alt="">
+        <img class="arr" src="RightArrow.svg" width="220" height="87" alt="" aria-hidden="true">
         <span class="hand">add a poppy</span>
       </div>
       <figure class="before">
-        <div class="box"><img class="photo" src="demo.png" alt="" onerror="this.style.display='none'"></div>
+        <div class="box">
+          <img
+            class="photo"
+            src="demo.webp"
+            width="1068"
+            height="712"
+            fetchpriority="high"
+            alt="Square original photo before a poppy is added"
+            onerror="this.style.display='none'"
+          >
+        </div>
         <figcaption class="cap hand">before</figcaption>
       </figure>
       <figure class="after">
         <div class="box">
-          <img class="photo" src="demo.png" alt="" onerror="this.style.display='none'">
-          <img class="sticker" src="poppy.svg" alt="" onerror="this.style.display='none'">
-          <img class="ring" src="ring.svg" alt="" aria-hidden="true">
+          <img
+            class="photo"
+            src="demo.webp"
+            width="1068"
+            height="712"
+            alt="Circular cropped profile photo"
+            onerror="this.style.display='none'"
+          >
+          <img
+            class="sticker"
+            src="poppy.svg"
+            width="1000"
+            height="1000"
+            alt="Red remembrance poppy placed in the upper-right corner"
+            onerror="this.style.display='none'"
+          >
+          <img class="ring" src="ring.svg" width="100" height="100" alt="" aria-hidden="true">
         </div>
         <figcaption class="cap hand">after</figcaption>
       </figure>
@@ -79,13 +143,18 @@
   </div>
 
   <section class="about">
+    <h2>How to add a poppy to your profile picture</h2>
+    <p>
+      Choose a photo, crop it to fit, then move, resize, or rotate the poppy.
+      Download your finished profile picture as a PNG when you are ready.
+    </p>
     <h2>About the poppy</h2>
     <p>
       Remembrance Day, taking place every year on November 11th, honours the
       military personnel who lost their lives or served in the line of duty.
     </p>
     <p>
-      The poem In Flounder's Field, written by Canadian Lieutenant-Colonel John
+      The poem <cite>In Flanders Fields</cite>, written by Canadian Lieutenant-Colonel John
       McCrae during World War I, is where the poppy's symbolic meaning originates
       from. McCrae's poem that captures the tragedy and loss from war was
       inspired by a burial he saw of a fellow soldier and friend of his. The
@@ -100,6 +169,26 @@
     site is not affiliated with the Royal Canadian Legion.
   </p>
 </main>
+
+<footer class="site-footer">
+  <nav class="footer-links" aria-label="Footer links">
+    <a class="footer-link" href="https://jambles.fun/">Home</a>
+    <a class="footer-link" href="https://buymeacoffee.com/jambles">Donate</a>
+    <a class="footer-link" href="https://www.instagram.com/troupples/">Instagram</a>
+    <a class="footer-link" href="https://www.youtube.com/@Troupples">Youtube</a>
+    <details class="footer-email-links">
+      <summary class="footer-link">
+        Contact
+        <span class="footer-email-chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="footer-email-buttons">
+        <a class="footer-link" href="mailto:hi@jambles.fun">hi@jambles.fun</a>
+        <a class="footer-link" href="mailto:removals@jambles.fun">removals@jambles.fun</a>
+        <a class="footer-link" href="mailto:bugs@jambles.fun">bugs@jambles.fun</a>
+      </div>
+    </details>
+  </nav>
+</footer>
 
 <input type="file" id="file" accept="image/*" class="hide">
 <script src="app.js" defer></script>
