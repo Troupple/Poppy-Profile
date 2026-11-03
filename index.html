@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta
+  name="description"
+  content="Crop your photo, add a poppy, and save your profile picture privately in your browser."
+>
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f1f0ec">
+<link rel="canonical" href="https://poppy.jambles.fun/">
+<link rel="icon" type="image/svg+xml" href="poppy.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A Poppy for Your Profile Picture">
+<meta property="og:url" content="https://poppy.jambles.fun/">
+<meta property="og:title" content="Add a Poppy to Your Profile Picture">
+<meta
+  property="og:description"
+  content="Crop a photo, place a poppy, and save your finished profile picture right in your browser."
+>
+<meta property="og:image" content="banner.png">
+<meta property="og:image:alt" content="Preview of a profile picture with a poppy added">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Add a Poppy to Your Profile Picture">
+<meta
+  name="twitter:description"
+  content="Crop a photo, place a poppy, and save your finished profile picture right in your browser."
+>
+<meta name="twitter:image" content="banner.png">
+<meta name="twitter:image:alt" content="Preview of a profile picture with a poppy added">
+<title>Poppy Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap"
+  rel="stylesheet"
+>
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap"
+  rel="stylesheet"
+>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Put a poppy on your profile picture.</h1>
+  <p class="lede">Upload a picture, crop it, and then add a poppy.</p>
+
+  <div id="intro">
+    <div class="demo">
+      <div class="step" aria-hidden="true">
+        <img class="arr" src="RightArrow.svg" alt="">
+        <span class="hand">add a poppy</span>
+      </div>
+      <figure class="before">
+        <div class="box"><img class="photo" src="demo.png" alt="" onerror="this.style.display='none'"></div>
+        <figcaption class="cap hand">before</figcaption>
+      </figure>
+      <figure class="after">
+        <div class="box">
+          <img class="photo" src="demo.png" alt="" onerror="this.style.display='none'">
+          <img class="sticker" src="poppy.svg" alt="" onerror="this.style.display='none'">
+          <img class="ring" src="ring.svg" alt="" aria-hidden="true">
+        </div>
+        <figcaption class="cap hand">after</figcaption>
+      </figure>
+    </div>
+    <div class="cta">
+      <button class="main" id="up">Choose a photo</button>
+    </div>
+  </div>
+
+  <div id="tool" class="hide">
+    <canvas id="cv"></canvas>
+    <p id="hint"></p>
+    <div id="bar"></div>
+    <p id="note"></p>
+  </div>
+
+  <section class="about">
+    <h2>About the poppy</h2>
+    <p>
+      Remembrance Day, taking place every year on November 11th, honours the
+      military personnel who lost their lives or served in the line of duty.
+    </p>
+    <p>
+      The poem In Flounder's Field, written by Canadian Lieutenant-Colonel John
+      McCrae during World War I, is where the poppy's symbolic meaning originates
+      from. McCrae's poem that captures the tragedy and loss from war was
+      inspired by a burial he saw of a fellow soldier and friend of his. The
+      poppy evolved into a symbol of remembering those who served. The Royal
+      Canadian Legion runs the national poppy campaign each year. To support
+      veterans directly, visit <a href="https://www.legion.ca">legion.ca</a>.
+    </p>
+    <p>Lest we forget.</p>
+  </section>
+  <p class="fine">
+    Your photo stays in your browser and is never uploaded to a server. This
+    site is not affiliated with the Royal Canadian Legion.
+  </p>
+</main>
+
+<input type="file" id="file" accept="image/*" class="hide">
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+:root {
+  --bg: #f1f0ec;
+  --fg: #232220;
+  --mut: #777670;
+  --tint: #e5e4df;
+  --tint2: #d9d8d2;
+  --acc: #E12238;
+  --highlight: #F7B5BE;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--fg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 "Bricolage Grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hand {
+  font-family: Caveat, "Segoe Print", "Bradley Hand", cursive;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.arr {
+  display: block;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 0 0 16px;
+  max-width: 11em;
+}
+
+.lede {
+  margin: 0 0 24px;
+  color: var(--mut);
+  max-width: 28em;
+}
+
+.demo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 17%;
+  margin-bottom: 40px;
+}
+
+.demo figure {
+  margin: 0;
+  width: 34%;
+  position: relative;
+  z-index: 1;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.after .photo {
+  border-radius: 50%;
+}
+
+.box {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--tint);
+  color: var(--mut);
+}
+
+.before .box {
+  transform: rotate(-3deg);
+  overflow: hidden;
+}
+
+.after .box {
+  border-radius: 50%;
+  background: var(--tint2);
+  transform: rotate(2deg);
+}
+
+.sticker {
+  position: absolute;
+  width: 30%;
+  top: 11.7%;
+  right: 11.7%;
+  transform: rotate(14deg);
+}
+
+.ring {
+  position: absolute;
+  inset: -9%;
+  width: 118%;
+  height: 118%;
+  opacity: .45;
+}
+
+.cap {
+  margin-top: 14px;
+  color: var(--mut);
+  text-align: center;
+}
+
+.step {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: var(--acc);
+}
+
+.step .hand {
+  display: block;
+  margin-top: 2px;
+  transform: rotate(-3deg);
+}
+
+.step .arr {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 10px 18px;
+  background: none;
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+button.main {
+  background: var(--acc);
+  color: #fff;
+  text-decoration: none;
+}
+
+button.main:hover {
+  opacity: .85;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+#tool canvas {
+  display: block;
+  touch-action: none;
+  max-width: 100%;
+  background: var(--tint);
+}
+
+#hint {
+  margin: 16px 0 18px;
+  color: var(--mut);
+  font-size: 15px;
+  min-height: 3em;
+}
+
+#bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#bar button:not(.main) {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#note {
+  margin: 12px 0 0;
+  color: var(--acc);
+  font-size: 15px;
+}
+
+.about {
+  margin-top: 48px;
+  color: var(--mut);
+}
+
+.about h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.about p {
+  margin: 0 0 14px;
+  max-width: 34em;
+}
+
+.about a {
+  color: var(--fg);
+}
+
+.fine {
+  margin-top: 48px;
+  font-size: 14px;
+  color: var(--mut);
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 32px 20px 48px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .step {
+    width: 25%;
+  }
+}
